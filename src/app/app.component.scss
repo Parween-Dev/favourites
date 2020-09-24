@@ -92,3 +92,92 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+@media screen and (max-width: 500px) {
+  .main {
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+
+    div {
+      height: 50vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid darkgray;
+
+      &.itemOne {
+        background-color: #EF476F;
+
+        &:hover {
+          background-color: darken(#EF476F, 5%);
+        }
+      }
+
+      &.itemTwo {
+        background-color: #36C9C6;
+
+        &:hover {
+          background-color: darken(#36C9C6, 5%);
+        }
+      }
+
+      p {
+        font-size: 28px;
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 4px;
+      }
+    }
+  }
+
+  .result {
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1C3144;
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 40px;
+    }
+
+    h1 {
+      padding: 50px 0 50px 0;
+      font-family: Roboto, sans-serif;
+      font-size: 36px;
+      text-align: center;
+      color: white;
+      letter-spacing: 4px;
+    }
+
+    p {
+      font-family: Roboto, sans-serif;
+      font-size: 20px;
+      text-align: left;
+      color: white;
+      letter-spacing: 4px;
+
+      &.winner-title {
+        color: #FFBA08;
+        text-align: center;
+        font-size: 32px;
+      }
+
+      &.winner {
+        font-size: 24px;
+        color: #FFBA08;
+        margin: 0 0 50px 0;
+        text-align: center;
+      }
+    }
+  }
+}
