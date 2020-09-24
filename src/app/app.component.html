@@ -1,0 +1,19 @@
+<div class="main" *ngIf="list.length">
+  <div class="itemOne" (click)="handlerClick(food[0].food)">
+    <p class="noselect" unselectable="on">{{food[0].food}}</p>
+  </div>
+  <div class="itemTwo" (click)="handlerClick(food[1].food)">
+    <p class="noselect" unselectable="on">{{food[1].food}}</p>
+  </div>
+</div>
+
+<div class="result" *ngIf="!list.length">
+  <h1>RESULT</h1>
+  <div class="wrapper">
+    <div *ngFor="let item of items; let i = index;">
+      <p class="winner-title" *ngIf="i === 0">WINNER!</p>
+      <p class="winner" *ngIf="i === 0">{{item.food}}: {{item.points}}</p>
+      <p *ngIf="i !== 0">{{item.food}}: {{item.points}}</p>
+    </div>
+  </div>
+</div>
